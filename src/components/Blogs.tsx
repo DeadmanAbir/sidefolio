@@ -26,7 +26,8 @@ export const Blogs = ({ blogs }: { blogs: Blog[] }) => {
         >
           <Link
             key={`blog-${blog.title}`}
-            href={`/blog/${blog.slug}`}
+            href={blog.slug}
+            target="_blank"
             className="relative my-10 block"
             onMouseEnter={() => setHovered(blog.slug)}
             onMouseLeave={() => setHovered(null)}
@@ -58,10 +59,10 @@ export const Blogs = ({ blogs }: { blogs: Blog[] }) => {
               <Image
                 src={blog.image}
                 alt="thumbnail"
-                height="200"
-                width="200"
-                objectFit="cover"
-                className="rounded-md object-cover h-40 w-60"
+                height="400"
+                width="400"
+                objectFit="contain"
+                className="rounded-md object-cover h-40 w-80"
               />
               <div className="flex flex-col col-span-3">
                 <Heading className="text-lg md:text-lg lg:text-lg">

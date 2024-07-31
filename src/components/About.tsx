@@ -3,13 +3,14 @@ import { Paragraph } from "@/components/Paragraph";
 import Image from "next/image";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function About() {
   const images = [
-    "https://images.unsplash.com/photo-1692544350322-ac70cfd63614?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1692374227159-2d3592f274c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1692005561659-cdba32d1e4a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1692445381633-7999ebc03730?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzM3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    "/images/about1.jpg",
+    "/images/about2.jpg",
+    "/images/about3.jpg",
+    "/images/about4.jpg",
   ];
   return (
     <div>
@@ -38,49 +39,21 @@ export default function About() {
             />
           </motion.div>
         ))}
-        {/* 
-        // <Image
-        //   src="https://images.unsplash.com/photo-1692544350322-ac70cfd63614?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60"
-        //   width={200}
-        //   height={400}
-        //   alt="about"
-        //   className="rounded-md object-cover transform rotate-3 shadow-xl block w-full h-40 md:h-60 hover:rotate-0 transition duration-200"
-        // />
-        // <Image
-        //   src="https://images.unsplash.com/photo-1692374227159-2d3592f274c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60"
-        //   width={200}
-        //   height={400}
-        //   alt="about"
-        //   className="rounded-md object-cover transform -rotate-3 shadow-xl block w-full h-40 md:h-60  hover:rotate-0 transition duration-200"
-        // />
-        // <Image
-        //   src="https://images.unsplash.com/photo-1692005561659-cdba32d1e4a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
-        //   width={200}
-        //   height={400}
-        //   alt="about"
-        //   className="rounded-md object-cover transform rotate-3 shadow-xl block w-full h-40 md:h-60  hover:rotate-0 transition duration-200"
-        // />
-        // <Image
-        //   src="https://images.unsplash.com/photo-1692445381633-7999ebc03730?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzM3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
-        //   width={200}
-        //   height={400}
-        //   alt="about"
-        //   className="rounded-md object-cover transform -rotate-3 shadow-xl block w-full h-40 md:h-60  hover:rotate-0 transition duration-200"
-        // /> */}
       </div>
 
       <div className="max-w-4xl">
         <Paragraph className=" mt-4">
-          Hey there, I&apos;m John Doe - a passionate developer, avid writer,
-          and a connoisseur of awesome design. Welcome to my corner of the
-          digital world!
+          Hey there, I&apos;m Abir Dutta - a passionate full stack developer,
+          avid tech writer, and an open-source enthusiast. Welcome to my corner
+          of the digital world!
         </Paragraph>
         <Paragraph className=" mt-4">
           Since the early days of my journey, I&apos;ve been captivated by the
-          art of crafting exceptional digital experiences. As a developer, I
-          thrive on turning lines of code into functional and elegant solutions.
-          My goal is to not just create software, but to build digital marvels
-          that seamlessly merge form and function.
+          art of crafting exceptional web applications and GEN AI apps. With
+          over a year of experience in the MERN stack, I thrive on turning lines
+          of code into functional and elegant solutions. My goal is to not just
+          create software, but to build digital marvels that seamlessly merge
+          form and function.
         </Paragraph>
 
         <Paragraph className=" mt-4">
@@ -88,30 +61,41 @@ export default function About() {
           and a mind brimming with ideas, I&apos;ve ventured into the realm of
           writing. From tech articles that unravel complex concepts to creative
           tales that ignite the imagination, I weave words to inform, entertain,
-          and inspire.
+          and inspire. You can find many of my tech articles on{" "}
+          <Link
+            href="https://deadmanabir.hashnode.dev/"
+            target="_blank"
+            className="font-black"
+          >
+            Hashnode.
+          </Link>
         </Paragraph>
         <Paragraph className=" mt-4">
-          What sets me apart is my unwavering appreciation for design. I believe
-          that aesthetics and usability go hand in hand. My eye for awesome
-          design ensures that every project I undertake not only works
-          flawlessly under the hood but also looks stunning on the surface.
+          What sets me apart is my unwavering love for open-source. I believe in
+          the power of collaborative development and enjoy exploring, building,
+          and maintaining open-source projects. This passion ensures that every
+          project I undertake not only works flawlessly under the hood but also
+          contributes to the broader tech community.
         </Paragraph>
         <Paragraph className=" mt-4">
-          Through this website, I aim to share my insights, experiences, and
-          creations with you. Whether you&apos;re a fellow developer seeking
-          solutions, a fellow writer in search of inspiration, or simply someone
-          who appreciates the finer aspects of design, there&apos;s something
-          here for you.
+          Currently, I am looking for new remote developer roles. If you have an
+          opportunity that aligns with my skills and passion, I&apos;d love to
+          connect and discuss how we can work together.
         </Paragraph>
-        <Paragraph className=" mt-4">
-          Join me on this journey of bytes and narratives, logic and creativity,
-          code and prose. Together, we can explore the boundless possibilities
-          of technology and storytelling, all while reveling in the sheer beauty
-          of thoughtful design.
-        </Paragraph>
+
         <Paragraph className=" mt-4">
           Thank you for being here, and I can&apos;t wait to embark on this
           adventure with you.
+        </Paragraph>
+        <Paragraph className=" mt-4">
+          My{" "}
+          <Link
+            href="https://github.com/DeadmanAbir"
+            target="_blank"
+            className="font-black"
+          >
+            GitHub
+          </Link>
         </Paragraph>
       </div>
     </div>

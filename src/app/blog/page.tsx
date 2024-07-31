@@ -6,24 +6,28 @@ import { Products } from "@/components/Products";
 import { getAllBlogs } from "../../../lib/getAllBlogs";
 import { Blogs } from "@/components/Blogs";
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Blogs | John Doe",
+  title: "Blogs | Abir Dutta",
   description:
-    "John Doe is a developer, writer and speaker. He is a digital nomad and travels around the world while working remotely.",
+    "Abir Dutta is a full stack developer. He is currently building and offering GEN AI applications.",
 };
 
 export default async function Blog() {
-  const blogs = await getAllBlogs();
-  const data = blogs.map(({ component, ...meta }) => meta);
-
+  const data = await getAllBlogs();
   return (
     <Container>
-      <span className="text-4xl">📝</span>
-      <Heading className="font-black pb-4">I write about technology</Heading>
+      <span className="text-4xl">#️⃣</span>
+      <Heading className="font-black pb-4">I write on Hashnode</Heading>
       <Paragraph className="pb-10">
-        Ever since <Highlight> I was a kid</Highlight>, I&apos;ve been
-        fascinated by technology.
+        Checkout my{" "}
+        <Highlight>
+          <Link href="https://deadmanabir.hashnode.dev/" target="_blank">
+            {" "}
+            Hashnode Account
+          </Link>
+        </Highlight>
       </Paragraph>
       <Blogs blogs={data} />
     </Container>

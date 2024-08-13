@@ -2,7 +2,7 @@ export const timeline = [
   {
     company: "kirak AI",
     title: "Founding Engineer",
-    date: "Mar 2024 - Present",
+    date: "Mar 2024 - Aug 2024",
     description: "Building the future of RAG",
     responsibilities: [
       "Developing and maintaining optimized secure backends using TrpC",
